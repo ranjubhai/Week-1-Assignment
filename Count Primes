@@ -1,0 +1,16 @@
+def count_primes(num):
+    if num < 2:
+        return 0
+
+    primes = [True] * (num + 1)
+    primes[0] = primes[1] = False
+
+    for i in range(2, int(num ** 0.5) + 1):
+        if primes[i]:
+            for j in range(i*i, num + 1, i):
+                primes[j] = False
+
+    return sum(primes)
+
+# Check
+print(count_primes(100))  # --> 25
