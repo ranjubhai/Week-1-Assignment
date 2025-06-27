@@ -1,0 +1,5 @@
+def paper_doll(text):
+    return ''.join([char * 3 for char in text])
+
+print(paper_doll('Hello'))        # --> 'HHHeeellllllooo'
+print(paper_doll('Mississippi'))  # --> 'MMMiiissssssiiippppppiii'
