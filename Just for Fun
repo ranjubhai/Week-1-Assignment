@@ -1,0 +1,48 @@
+def print_big(letter):
+    patterns = {
+        'A': [
+            '  *  ',
+            ' * * ',
+            '*****',
+            '*   *',
+            '*   *'
+        ],
+        'B': [
+            '**** ',
+            '*   *',
+            '**** ',
+            '*   *',
+            '**** '
+        ],
+        'C': [
+            ' ****',
+            '*    ',
+            '*    ',
+            '*    ',
+            ' ****'
+        ],
+        'D': [
+            '**** ',
+            '*   *',
+            '*   *',
+            '*   *',
+            '**** '
+        ],
+        'E': [
+            '*****',
+            '*    ',
+            '*****',
+            '*    ',
+            '*****'
+        ]
+    }
+
+    letter = letter.upper()
+    if letter in patterns:
+        for line in patterns[letter]:
+            print(line)
+    else:
+        print("Letter not supported.")
+
+# Check
+print_big('a')
